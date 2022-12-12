@@ -20,7 +20,7 @@ pipeline {
     stage ('Test') {
         steps {
             sh '''#!/bin/bash
-            sudo apt install python3.10-venv
+            sudo apt install python3.10-venv -y
             python3 -m venv test3
             source test3/bin/activate
             python3 -m py.test --verbose --junit-xml test-reports/results.xml
